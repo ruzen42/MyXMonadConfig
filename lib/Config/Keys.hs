@@ -11,4 +11,5 @@ myKeys =
     , ("M4-S-r", spawn restartXMonad)
     , ("<Print>", spawn flameshot)
     , ("M4-b", spawn browser)
+    , ("M4-S-x", spawn telegram)
     ]

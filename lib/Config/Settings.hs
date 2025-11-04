@@ -1,15 +1,13 @@
 module Config.Settings where
 
 term, appsStarter, restartXMonad, browser, flameshot :: String
-term = "sakura"
-appsStarter = "rofi -theme ~/.everforest.rasi -show drun"
+term = "alacritty"
+appsStarter = "rofi -theme /home/ruzen42/.config/tokyonight.rasi -show drun"
 restartXMonad = "xmonad --recompile && xmonad --restart"
 browser = "firefox"
 flameshot = "flameshot gui"
-telegram = "nix-shell -p " ++ name ++ " --run " ++ name
-  where
-    name = "telegram-desktop"
-  
+telegram = "telegram-desktop"
+
 
 spacingSize :: Int
-spacingSize = 2
+spacingSize = 5

@@ -12,4 +12,12 @@ myStartupCommands =
     ]
 
 myStartupHook :: X ()
+<<<<<<< HEAD
 myStartupHook = mapM_ spawnOnce myStartupCommands
+=======
+myStartupHook = do
+	spawnOnce "picom -b"
+	spawnOnce "feh --bg-scale /home/ruzen42/background.png"
+	spawnOnce "taffybar"
+	spawnOnce "xrandr --output DP-2 --rate 165"
+>>>>>>> 181918d (fix)

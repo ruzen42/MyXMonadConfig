@@ -9,8 +9,8 @@ myStartupCommands :: [String]
 myStartupCommands =
     [ "picom -b"
     , "feh --bg-scale /home/ruzen42/background.png"
-    , "xrandr --output DisplayPort-1 --rate 165"
     , "alacritty"
+    , "xrandr --output DisplayPort-1 --mode 1920x1080 --rate 165"
     ]
 
 myStartupHook :: X ()

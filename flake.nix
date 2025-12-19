@@ -16,9 +16,14 @@
         windowManager.xmonad = {
           enable = true;
           enableContribAndExtras = true;
-          configDir = ./.;
+          haskellPackages = pkgs.haskellPackages.override { overrides = self: super: {
+            xmonad-config = self.callCabal2nix "xmonad-config" ./.; };
+            };
+
+          config = builtins.readFile ./xmonad.hs;
         };
       };
+      systemd.user.services.xmonad.environment.XMONAD_GHC_ARGS = "-i${./.}/lib";
     };
 
     packages = forAllSystems (system: {
